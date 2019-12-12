@@ -1,0 +1,37 @@
+.header {
+    padding:10px;
+    text-align: left;
+    background: #ffffff;
+    color: rgb(162, 0, 255);
+    font-size: 30px;
+  }
+
+.h1{
+    float: right;
+}
+
+.sliderImg {
+    width: 500px; 
+    height:500px;
+    display: flex;
+    position: relative;
+}
+
+.window{
+overflow: hidden;
+width: 500px;
+margin: 0 auto;
+position: relative;
+white-space: nowrap;
+}
+
+#slider{
+    width: 2000px;
+    position: relative;
+    display: flex;
+}
+
+.buttons{
+    margin: 10px auto;
+    width: 100px;
+}

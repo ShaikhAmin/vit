@@ -1,0 +1,83 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css">
+    <title>BSA of NY</title>
+</head>
+
+<body>
+
+    <div class="header">
+        
+        <img src="./img/bsa1.png" alt="" style="width:60px; height:60px; float: left;"> 
+        <h1 style="float:left; margin-bottom: 1px;">BSA of NY</h1>
+        <p style="color: lightcoral; display: inline-block; margin: 0;">Bangladesh Students Association of New York</p>
+       
+    </div>
+    
+    <button type="button" class="btn btn-outline-primary">Home</button>
+    <button type="button" class="btn btn-outline-secondary">Resources</button>
+    <button type="button" class="btn btn-outline-success">Career Development</button>
+    <button type="button" class="btn btn-outline-danger">Upcoming Events</button>
+    <button type="button" class="btn btn-outline-warning">JOB & Internship</button>
+    <button type="button" class="btn btn-outline-info">Contact Us</button>
+
+
+    <div class="window" style="clear: both">
+        <div id="slider">
+            <img class="sliderImg" src="./img/bsa2.png" alt="" width: 400px; height:400px>
+            <img class="sliderImg" src="./img/bsa3.png" alt="" width: 400px; height:400px>
+            <img class="sliderImg" src="./img/bsa4.png" alt="" width: 400px; height:400px>
+            <img class="sliderImg" src="./img/bsa5.png" alt="" width: 400px; height:400px>
+
+        </div>
+    </div>
+  
+  
+
+    <div class="buttons">
+        <button class="leftButton" onclick="slideLeft()">left</button>
+        <button class="rightButton" onclick="slideRight()">right</button>
+    </div>
+</body>
+
+<script>
+    let pos = 0;
+    var slideLeft = () => {
+        console.log('click left');
+        const sliderElement = document.getElementById('slider');
+        console.log('sliderElement:', sliderElement);
+        // if (pos<= -900){
+        //     pos = 0;
+        // }
+        // else{
+        //     pos = pos - 300;
+        //     // pos -= 300;
+        // }
+
+        pos <= -1500 ? (pos = 0) : (pos -= 500);
+
+        sliderElement.setAttribute(
+            'style',
+            `transform: translateX(${pos}px); transition: transform 0.5s linear; -webkit-transition: transform 0.5s linear;`);
+    };
+    //  var slideRight = () => {
+    //    console.log('click right')
+
+    var slideRight = () => {
+        console.log('click right');
+        const sliderElement = document.getElementById('slider');
+        console.log('sliderElement:', sliderElement);
+
+        pos === 0 ? null : (pos += 500);
+
+        sliderElement.setAttribute(
+            'style',
+            `transform: translateX(${pos}px); transition: transform 0.5s linear; -webkit-transition: transform 0.5s linear;`);
+    };
+</script>
+
+</html>
